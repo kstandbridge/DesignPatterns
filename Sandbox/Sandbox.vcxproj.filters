@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MaybeMonad.cpp" />
+    <ClCompile Include="SOLID\1_SRP.cpp">
+      <Filter>SOLID</Filter>
+    </ClCompile>
+    <ClCompile Include="SOLID\2_OCP.cpp">
+      <Filter>SOLID</Filter>
+    </ClCompile>
+    <ClCompile Include="SOLID\4_ISP.cpp">
+      <Filter>SOLID</Filter>
+    </ClCompile>
+    <ClCompile Include="SOLID\5_DIP.cpp">
+      <Filter>SOLID</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SOLID">
+      <UniqueIdentifier>{dcf7a2f6-c3df-4458-be31-98f9e45371d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SOLID\3_LSP.cpp">
+      <Filter>SOLID</Filter>
+    </ClInclude>
+    <ClInclude Include="SOLID\di.hpp">
+      <Filter>SOLID</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
