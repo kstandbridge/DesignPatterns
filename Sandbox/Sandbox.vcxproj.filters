@@ -113,7 +113,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Creational\Singleton\capitals.txt">
+    <Text Include="capitals.txt">
       <Filter>Creational\Singleton</Filter>
     </Text>
   </ItemGroup>
