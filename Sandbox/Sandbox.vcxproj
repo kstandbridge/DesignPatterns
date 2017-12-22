@@ -61,6 +61,7 @@
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>gtest_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -92,6 +93,8 @@
     <ClCompile Include="Creational\Prototype.cpp" />
     <ClCompile Include="Creational\Serialization.cpp" />
     <ClCompile Include="Creational\Singleton\SingletonTests.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Structural\Adapter.cpp" />
     <ClCompile Include="SOLID\1_SRP.cpp" />
     <ClCompile Include="SOLID\2_OCP.cpp" />
     <ClCompile Include="SOLID\4_ISP.cpp" />

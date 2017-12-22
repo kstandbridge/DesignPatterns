@@ -50,6 +50,10 @@
     <ClCompile Include="Creational\Singleton\SingletonTests.cpp">
       <Filter>Creational\Singleton</Filter>
     </ClCompile>
+    <ClCompile Include="Structural\Adapter.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
@@ -72,6 +76,9 @@
     </Filter>
     <Filter Include="Creational\Singleton">
       <UniqueIdentifier>{eb7f637e-20df-4571-a092-5a2bbdafee93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structural">
+      <UniqueIdentifier>{a62a2cc1-a8ca-4a15-812c-94afb19d3716}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
