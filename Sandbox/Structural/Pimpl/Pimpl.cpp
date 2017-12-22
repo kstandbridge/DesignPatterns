@@ -13,7 +13,7 @@
 
 using namespace Pimpl;
 
-int main(int argc, char* argv[])
+int Pimpl_main(int argc, char* argv[])
 {
 	User f;
 	f.name = "Kenneth";

@@ -61,6 +61,7 @@
     <ClCompile Include="Structural\Pimpl\User.cpp">
       <Filter>Structural\Pimpl</Filter>
     </ClCompile>
+    <ClCompile Include="Structural\Bridge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
