@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="MaybeMonad.cpp" />
     <ClCompile Include="SOLID\1_SRP.cpp">
       <Filter>SOLID</Filter>
     </ClCompile>
@@ -53,7 +52,15 @@
     <ClCompile Include="Structural\Adapter.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Functional\MaybeMonad.cpp">
+      <Filter>Functional</Filter>
+    </ClCompile>
+    <ClCompile Include="Structural\Pimpl\Pimpl.cpp">
+      <Filter>Structural\Pimpl</Filter>
+    </ClCompile>
+    <ClCompile Include="Structural\Pimpl\User.cpp">
+      <Filter>Structural\Pimpl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
@@ -79,6 +86,12 @@
     </Filter>
     <Filter Include="Structural">
       <UniqueIdentifier>{a62a2cc1-a8ca-4a15-812c-94afb19d3716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Functional">
+      <UniqueIdentifier>{d68585bc-174a-4838-b188-7147f5dddf94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structural\Pimpl">
+      <UniqueIdentifier>{2ad3cbcf-3e83-4e60-bf4d-c8e71b1e27c6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="Creational\Factory\AbstractFactory\TeaFactory.h">
       <Filter>Creational\Factory\AbstractFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Structural\Pimpl\User.h">
+      <Filter>Structural\Pimpl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
