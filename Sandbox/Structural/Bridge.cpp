@@ -63,7 +63,7 @@ namespace Bridge
 
 using namespace Bridge;
 
-int main(int argc, char* argv[])
+int bridge_main(int argc, char* argv[])
 {
 	RasterRenderer rr;
 	Circle raster_circle{rr, 10, 10, 5};

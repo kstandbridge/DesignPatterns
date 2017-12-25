@@ -62,6 +62,9 @@
       <Filter>Structural\Pimpl</Filter>
     </ClCompile>
     <ClCompile Include="Structural\Bridge.cpp" />
+    <ClCompile Include="Structural\Composite.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">

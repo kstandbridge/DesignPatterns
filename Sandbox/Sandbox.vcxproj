@@ -93,6 +93,7 @@
     <ClCompile Include="Creational\Prototype.cpp" />
     <ClCompile Include="Creational\Serialization.cpp" />
     <ClCompile Include="Creational\Singleton\SingletonTests.cpp" />
+    <ClCompile Include="Structural\Composite.cpp" />
     <ClCompile Include="Structural\Bridge.cpp" />
     <ClCompile Include="Structural\Pimpl\Pimpl.cpp" />
     <ClCompile Include="Structural\Adapter.cpp" />
