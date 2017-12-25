@@ -7,9 +7,9 @@ namespace Composite
 	// Composite - A mechanism for treating individual (scalar) 
 	// and compositions of objects in a uniform manner
 
-	// Think of a draw program, you draw multiple shapes but you need to group them, and draw groups of shapes
-
-	// So lets attempt to treat both single and composite objects uniformly
+	// Think of a draw program, you draw multiple shapes but you 
+	// need to group them, and draw groups of shapes So lets attempt
+	// to treat both single and composite objects uniformly
 
 	// This is our interface, which all composite objects will inherit from
 	struct IGraphicObject
@@ -44,7 +44,6 @@ namespace Composite
 
 	};
 }
-
 
 int Composite_main(int argc, char* argv[])
 {
