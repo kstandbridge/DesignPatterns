@@ -61,8 +61,13 @@
     <ClCompile Include="Structural\Pimpl\User.cpp">
       <Filter>Structural\Pimpl</Filter>
     </ClCompile>
-    <ClCompile Include="Structural\Bridge.cpp" />
     <ClCompile Include="Structural\Composite.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
+    <ClCompile Include="Structural\Bridge.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
+    <ClCompile Include="Structural\Decorator.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
   </ItemGroup>
