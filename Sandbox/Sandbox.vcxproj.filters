@@ -67,12 +67,13 @@
     <ClCompile Include="Structural\Bridge.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
-    <ClCompile Include="WrappingDecorator.cpp">
-      <Filter>Structural</Filter>
+    <ClCompile Include="Structural\Decorator\WrappingDecorator.cpp">
+      <Filter>Structural\Decorator</Filter>
     </ClCompile>
-    <ClCompile Include="Structural\FunctionalDecorator.cpp">
-      <Filter>Structural</Filter>
+    <ClCompile Include="Structural\Decorator\FunctionalDecorator.cpp">
+      <Filter>Structural\Decorator</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
@@ -104,6 +105,9 @@
     </Filter>
     <Filter Include="Structural\Pimpl">
       <UniqueIdentifier>{2ad3cbcf-3e83-4e60-bf4d-c8e71b1e27c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structural\Decorator">
+      <UniqueIdentifier>{a1647454-5271-478e-a609-b241565e4ea3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

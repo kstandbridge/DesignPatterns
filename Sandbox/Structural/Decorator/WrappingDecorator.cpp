@@ -20,6 +20,8 @@ namespace WrappingDecorator
 	{
 		float radius;
 
+		Circle(){}
+
 		explicit Circle(float radius)
 			: radius{radius}
 		{
@@ -30,6 +32,11 @@ namespace WrappingDecorator
 			std::ostringstream oss;
 			oss << "A circle of radius " << radius;
 			return oss.str();
+		}
+
+		void resize(float factor)
+		{
+			radius *= factor;
 		}
 	};
 
@@ -57,7 +64,7 @@ namespace WrappingDecorator
 
 		Shape& shape; // We have a reference to the underlying Shape
 		std::string color; // We add functionality to it
-	
+		
 		ColoredShape(Shape& shape, const std::string& color)
 			: shape{shape},
 			  color{color}
@@ -92,6 +99,59 @@ namespace WrappingDecorator
 			return oss.str();
 		}
 	};
+
+	// In the above examples, lets say we created a colored circle.
+	// Then we wanted call resize, or set the radius
+	void limitations()
+	{
+		Circle circle{5};
+		ColoredShape redCircle { circle, "red" };
+		// redCircle.resize(7)
+		// redCircle.radius = 7;
+		// This is not possible because ColoredShape is a Shape, not a circle
+	}
+
+	// We can solve this with mixin inheritence
+	template <typename T> struct ColoredShape2 : T 
+	{
+		std::string color;
+		
+		ColoredShape2() { } // Empty as inheriters will call base constructors
+
+		explicit ColoredShape2(const std::string& color)
+			: color{color}
+		{
+		}
+
+		std::string str() const override
+		{
+			std::ostringstream oss;
+			oss << T::str() << " has the color " << color;
+			return oss.str();
+		}
+	};
+
+	template <typename T> struct TransparentShape2 : T
+	{
+		uint8_t transparency;
+
+
+		TransparentShape2() { } // Empty as inheriters will call base constructors
+
+		TransparentShape2(uint8_t transparency)
+			: transparency{transparency}
+		{
+		}
+
+		std::string str() const override
+		{
+			std::ostringstream oss;
+			oss << T::str() << " has "
+					<< static_cast<float>(transparency) / 255.0f * 100.0f
+					<< "% transparency";
+			return oss.str();
+		}
+	};
 }
 
 int WrappingDecorator_main(int argc, char* argv[])
@@ -108,6 +168,16 @@ int WrappingDecorator_main(int argc, char* argv[])
 
 	TransparentShape half_tr_red_circle{ red_circle, 128 };
 	std::cout << half_tr_red_circle.str() << std::endl;
+
+	// Using our template classes, mixin inheritence
+	ColoredShape2<Circle> red_circle2{ "red" };
+	red_circle2.radius = 5;
+	std::cout << red_circle2.str() << std::endl;
+
+	TransparentShape2<ColoredShape2<Circle>> red_half_transparent_circle { 128 };
+	red_half_transparent_circle.color = "red";
+	red_half_transparent_circle.radius = 100;
+	std::cout << red_half_transparent_circle.str() << std::endl;
 
 	return 0;
 }
