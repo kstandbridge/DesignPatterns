@@ -20,7 +20,8 @@ namespace WrappingDecorator
 	{
 		float radius;
 
-		Circle(){}
+
+		Circle() {} // Inheriters call the base ctor
 
 		explicit Circle(float radius)
 			: radius{radius}
@@ -44,15 +45,15 @@ namespace WrappingDecorator
 	{
 		float side;
 
-		explicit Square(float side)
-			: side{side}
+		explicit Square(float size)
+			: side{size}
 		{
 		}
 
 		std::string str() const override
 		{
 			std::ostringstream oss;
-			oss << "A square with side = " << side;
+			oss << "A square with size = " << side;
 			return oss.str();
 		}
 	};
@@ -114,12 +115,28 @@ namespace WrappingDecorator
 	// We can solve this with mixin inheritence
 	template <typename T> struct ColoredShape2 : T 
 	{
-		std::string color;
-		
-		ColoredShape2() { } // Empty as inheriters will call base constructors
+		/*  // We want to forge the template argument to be a shape
+		 *	struct NotAShape
+		 *	{
+		 *		virtual std::string str() const { return std::string{}; }
+		 *	};
+		 *	
+		 *	ColoredShape2<NotAShape> legal;
+		 */ // We can do this with a static assert (static assert is a compile time check, assert is a run time check)
+		static_assert(std::is_base_of<Shape, T>::value, "Template argument must be a Shape");
 
-		explicit ColoredShape2(const std::string& color)
-			: color{color}
+		std::string color;
+
+		ColoredShape2() { }	// As inheiters call the bass class
+		
+		/*
+		 * A better way than having an empty constructor would be to use forwarding
+		 * We can have a template constructor and pass on arguments to the base constructor
+		 */
+		
+		template <typename...Args>
+		ColoredShape2(const std::string& color, Args ...args)
+			: T(args...), color{color} // ... unpack those args and pass them to the base, dont just pass Args!
 		{
 		}
 
@@ -131,15 +148,14 @@ namespace WrappingDecorator
 		}
 	};
 
+	// Lets create one for Transparency for completeness
 	template <typename T> struct TransparentShape2 : T
 	{
 		uint8_t transparency;
 
-
-		TransparentShape2() { } // Empty as inheriters will call base constructors
-
-		TransparentShape2(uint8_t transparency)
-			: transparency{transparency}
+		template <typename...Args>
+		TransparentShape2(const uint8_t transparency, Args ...args)
+			: T(args...), transparency{transparency}
 		{
 		}
 
@@ -179,5 +195,9 @@ int WrappingDecorator_main(int argc, char* argv[])
 	red_half_transparent_circle.radius = 100;
 	std::cout << red_half_transparent_circle.str() << std::endl;
 
+	// Using our variadic constructor
+	TransparentShape2<Square> hidden_square { 0, 15 }; // transparency=0, radius=15
+	std::cout << hidden_square.str() << std::endl;
+	
 	return 0;
 }
