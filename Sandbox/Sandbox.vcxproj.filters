@@ -67,7 +67,10 @@
     <ClCompile Include="Structural\Bridge.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
-    <ClCompile Include="Structural\Decorator.cpp">
+    <ClCompile Include="WrappingDecorator.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
+    <ClCompile Include="Structural\FunctionalDecorator.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
   </ItemGroup>

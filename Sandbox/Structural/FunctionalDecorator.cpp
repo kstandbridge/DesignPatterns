@@ -1,16 +1,8 @@
-// Decorator (AKA Wrapper)
-
-// Want to augment exiting functionality (Open-Closed Principle)
-
-// 
-
-// functional decorator? Logging functionality
-
 #include <functional>
 #include <iostream>
 #include <string>
 
-namespace Decorator
+namespace FunctionalDecorator
 {
 	// Dectorator AKA Wrapper
 	// Allows for adding behaviour to individual objects without affecting the behaviour of other objects of the same class
@@ -105,7 +97,7 @@ namespace Decorator
 
 int decotator_main(int argc, char* argv[])
 {
-	using namespace Decorator;
+	using namespace FunctionalDecorator;
 	Logger logger{[](){ std::cout << "Logger: Hello" << std::endl; }, "HelloFunc"};
 	logger();
 
