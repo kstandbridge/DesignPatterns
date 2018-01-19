@@ -96,6 +96,7 @@
     <ClCompile Include="Facade.cpp" />
     <ClCompile Include="Flyweight.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Null_Object.cpp" />
     <ClCompile Include="Structural\Decorator\WrappingDecorator.cpp" />
     <ClCompile Include="Structural\Decorator\FunctionalDecorator.cpp" />
     <ClCompile Include="Structural\Composite.cpp" />
