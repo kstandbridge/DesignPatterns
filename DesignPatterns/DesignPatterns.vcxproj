@@ -43,8 +43,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\GIT\googletest\googletest\include;C:\Boost;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\GIT\googletest\googletest\build\Debug;C:\Boost\stage_x64\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VcpkgRoot)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\GIT\googletest\googletest\include;C:\Boost;$(IncludePath)</IncludePath>
@@ -60,7 +60,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gtest_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(VcpkgRoot)debug\lib\manual-link\gtest_maind.lib;$(VcpkgRoot)debug\lib\manual-link\gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -93,6 +93,7 @@
     <ClCompile Include="Creational\Prototype.cpp" />
     <ClCompile Include="Creational\Serialization.cpp" />
     <ClCompile Include="Creational\Singleton\SingletonTests.cpp" />
+    <ClCompile Include="Flyweight.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Structural\Decorator\WrappingDecorator.cpp" />
     <ClCompile Include="Structural\Decorator\FunctionalDecorator.cpp" />

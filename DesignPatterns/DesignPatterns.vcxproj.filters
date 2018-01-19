@@ -74,6 +74,9 @@
       <Filter>Structural\Decorator</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Flyweight.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">

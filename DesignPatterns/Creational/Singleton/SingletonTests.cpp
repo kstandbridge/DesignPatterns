@@ -1,3 +1,5 @@
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
+
 #include "Singleton.h"
 #include <gtest/gtest.h>
 
