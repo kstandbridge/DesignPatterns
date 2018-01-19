@@ -77,6 +77,9 @@
     <ClCompile Include="Flyweight.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
+    <ClCompile Include="Facade.cpp">
+      <Filter>Structural</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
