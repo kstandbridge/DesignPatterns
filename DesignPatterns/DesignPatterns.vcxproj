@@ -93,10 +93,11 @@
     <ClCompile Include="Creational\Prototype.cpp" />
     <ClCompile Include="Creational\Serialization.cpp" />
     <ClCompile Include="Creational\Singleton\SingletonTests.cpp" />
-    <ClCompile Include="Facade.cpp" />
-    <ClCompile Include="Flyweight.cpp" />
+    <ClCompile Include="Structural\Facade.cpp" />
+    <ClCompile Include="Structural\Flyweight.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Null_Object.cpp" />
+    <ClCompile Include="Structural\Null_Object.cpp" />
+    <ClCompile Include="Structural\Proxy\Proxy_smart_pointers.cpp" />
     <ClCompile Include="Structural\Decorator\WrappingDecorator.cpp" />
     <ClCompile Include="Structural\Decorator\FunctionalDecorator.cpp" />
     <ClCompile Include="Structural\Composite.cpp" />
