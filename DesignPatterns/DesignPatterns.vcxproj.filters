@@ -86,6 +86,9 @@
     <ClCompile Include="Structural\Null_Object.cpp">
       <Filter>Structural</Filter>
     </ClCompile>
+    <ClCompile Include="Structural\Proxy\virtual_proxy.cpp">
+      <Filter>Structural\Proxy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">

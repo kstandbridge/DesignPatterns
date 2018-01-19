@@ -110,6 +110,7 @@
     <ClCompile Include="SOLID\5_DIP.cpp" />
     <ClCompile Include="Functional\MaybeMonad.cpp" />
     <ClCompile Include="Structural\Pimpl\User.cpp" />
+    <ClCompile Include="Structural\Proxy\virtual_proxy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Creational\Builder\Facets\Person.h" />
