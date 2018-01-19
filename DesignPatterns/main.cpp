@@ -1,6 +1,4 @@
-
-
-#include <cstdlib>
+#include <iostream>
 
 namespace Facade
 {
@@ -11,8 +9,10 @@ namespace Facade
 	// Wrap a poorly designed collection of APIs with a single well-designed API
 }
 
-
 int main(int argc, char* argv[])
 {
+	getchar();
 	return EXIT_SUCCESS;
 }
+
+

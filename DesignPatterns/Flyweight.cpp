@@ -75,3 +75,46 @@ int Flyweight_main(int argc, char* argv[])
 	getchar();
 	return EXIT_SUCCESS;
 }
+
+#include <boost/flyweight.hpp>
+namespace Flyweight_Library
+{
+	// Boost has provided a library that implements the flyweight pattern for us
+	// We just need to specify boost::flyweight<T>
+
+	struct User2
+	{
+		boost::flyweight<std::string> first_name, last_name;
+
+		User2(const std::string& firstName, const std::string& lastName)
+			: first_name{firstName},
+			  last_name{lastName}
+		{
+		}
+		
+		friend std::ostream& operator<<(std::ostream& os, const User2& obj)
+		{
+			return os
+					<< "first_name: " << obj.first_name
+					<< " last_name: " << obj.last_name;
+		}
+	};
+}
+
+using namespace Flyweight_Library;
+int Flyweight_Library_main(int argc, char* argv[])
+{
+	User2 john_doe {"John", "Doe" };
+	User2 jane_doe {"Jane", "Doe" };
+
+	std::cout << "John " << john_doe << std::endl;
+	std::cout << "Jane " << jane_doe << std::endl;
+
+	// Check to see the last name is pointing to the same memory address
+	std::cout << std::boolalpha 
+			  << (&jane_doe.last_name.get() == &john_doe.last_name.get())
+			  << std::endl;
+	
+	getchar();
+	return EXIT_SUCCESS;
+}
