@@ -77,6 +77,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Behavioral\ChainOfResponsibility_BrokerChain.cpp" />
     <ClCompile Include="Behavioral\ChainOfResponsibility_PointerChain.cpp" />
     <ClCompile Include="Structural\Proxy\communication_proxy.cpp" />
     <ClCompile Include="Creational\Builder\Builder.cpp" />
