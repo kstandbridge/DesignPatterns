@@ -92,6 +92,9 @@
     <ClCompile Include="Structural\Proxy\communication_proxy.cpp">
       <Filter>Structural\Proxy</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\ChainOfResponsibility_PointerChain.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
@@ -129,6 +132,9 @@
     </Filter>
     <Filter Include="Structural\Proxy">
       <UniqueIdentifier>{a8711dfa-ad28-48ad-8848-fe737f3026f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavioral">
+      <UniqueIdentifier>{448ea533-b95f-47eb-9c5a-9592758729f5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
