@@ -98,6 +98,9 @@
     <ClCompile Include="Behavioral\ChainOfResponsibility_BrokerChain.cpp">
       <Filter>Behavioral</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\CommandPattern.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
