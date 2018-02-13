@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 namespace Iterator
@@ -195,3 +196,82 @@ int Iterator_main(int argc, char* argv[])
     getchar();
     return EXIT_SUCCESS;
 }
+
+// you can simplify this approach with boost
+// naming can cause some confusion. think more facade as in it hides away the complexities of the iterator pattern
+#include <boost/iterator/iterator_facade.hpp>
+
+namespace Iterator_Facade
+{
+    // Lets just have a simple parent/child structure
+    struct Node
+    {
+        string value;
+        Node* next = nullptr;
+        
+        explicit Node(const string& value)
+            : value{value}
+        {
+        }
+        
+        Node(const string& value, Node* parent)
+            : value{value}
+        {
+            parent->next = this;
+        }
+    };
+
+    struct ListIterator : boost::iterator_facade<ListIterator,  // The class to derive from, itself
+                                                 Node, // What are we iteratoring
+                                                 boost::forward_traversal_tag> // How are we traversing?
+    {
+        Node* current = nullptr; // Which element are we currently pointing to
+
+        ListIterator() // empty constructer to quickly generate a nullptr iterator, so we can end a traverse
+        {            
+        }
+
+        explicit ListIterator(Node* current)
+            : current{current}
+        {
+        }
+
+    private:
+        friend class boost::iterator_core_access; // Helper class for granting access to the iterator core interface
+
+        // We need to give boost increment, equal and dereference functions
+
+        void increment() { current = current->next; } // How do we traverse to the next?
+
+        bool equal(const ListIterator& other) const // How do we compare two elements?
+        {
+            return other.current == current;
+        }
+
+        Node& dereference() const // How do we dereference?
+        {
+            return *current;
+        }
+    };
+
+    int Iterator_Facade_main(int argc, char* argv[])
+    {
+        Node alpha{ "alpha" };
+        Node beta{ "beta", &alpha };
+        Node gamma{ "gamma", &beta};
+
+        // We can use for_each from <algorithm> to traverse using our ListIterator
+        for_each(ListIterator{&alpha}, 
+                 ListIterator{},
+                 [](const Node& n)
+        {
+            cout << n.value << endl;
+        });
+
+
+	    getchar();
+	    return EXIT_SUCCESS;
+    }
+}
+
+
