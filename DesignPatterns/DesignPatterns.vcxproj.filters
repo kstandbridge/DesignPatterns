@@ -107,6 +107,9 @@
     <ClCompile Include="Behavioral\Interpreter.cpp">
       <Filter>Behavioral</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\iterator.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
