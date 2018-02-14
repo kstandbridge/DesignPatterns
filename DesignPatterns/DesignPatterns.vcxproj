@@ -83,6 +83,9 @@
     <ClCompile Include="Behavioral\CompositeCommandPattern.cpp" />
     <ClCompile Include="Behavioral\Interpreter.cpp" />
     <ClCompile Include="Behavioral\iterator.cpp" />
+    <ClCompile Include="Behavioral\Mediator_Chatroom\ChatRoom.cpp" />
+    <ClCompile Include="Behavioral\Mediator_Chatroom\ChatPerson.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Structural\Proxy\communication_proxy.cpp" />
     <ClCompile Include="Creational\Builder\Builder.cpp" />
     <ClCompile Include="Creational\Builder\Facets\Facets.cpp" />
@@ -98,7 +101,7 @@
     <ClCompile Include="Creational\Singleton\SingletonTests.cpp" />
     <ClCompile Include="Structural\Facade.cpp" />
     <ClCompile Include="Structural\Flyweight.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Behavioral\Mediator_Chatroom\Mediator_Chatroom.cpp" />
     <ClCompile Include="Structural\Null_Object.cpp" />
     <ClCompile Include="Structural\Proxy\Proxy_smart_pointers.cpp" />
     <ClCompile Include="Structural\Decorator\WrappingDecorator.cpp" />
@@ -116,6 +119,7 @@
     <ClCompile Include="Structural\Proxy\virtual_proxy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Behavioral\Mediator_Chatroom\ChatRoom.h" />
     <ClInclude Include="Creational\Builder\Facets\Person.h" />
     <ClInclude Include="Creational\Builder\Facets\PersonAddressBuilder.h" />
     <ClInclude Include="Creational\Builder\Facets\PersonBuilder.h" />
@@ -126,6 +130,7 @@
     <ClInclude Include="Creational\Factory\AbstractFactory\HotDrinkFactory.h" />
     <ClInclude Include="Creational\Factory\AbstractFactory\TeaFactory.h" />
     <ClInclude Include="Creational\Singleton\Singleton.h" />
+    <ClInclude Include="Behavioral\Mediator_Chatroom\ChatPerson.h" />
     <ClInclude Include="SOLID\3_LSP.cpp" />
     <ClInclude Include="SOLID\di.hpp" />
     <ClInclude Include="Structural\Pimpl\User.h" />

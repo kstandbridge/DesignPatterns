@@ -73,7 +73,6 @@
     <ClCompile Include="Structural\Decorator\FunctionalDecorator.cpp">
       <Filter>Structural\Decorator</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Structural\Proxy\Proxy_smart_pointers.cpp">
       <Filter>Structural\Proxy</Filter>
     </ClCompile>
@@ -109,6 +108,16 @@
     </ClCompile>
     <ClCompile Include="Behavioral\iterator.cpp">
       <Filter>Behavioral</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Behavioral\Mediator_Chatroom\ChatPerson.cpp">
+      <Filter>Behavioral\Mediator_Chatroom</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavioral\Mediator_Chatroom\ChatRoom.cpp">
+      <Filter>Behavioral\Mediator_Chatroom</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavioral\Mediator_Chatroom\Mediator_Chatroom.cpp">
+      <Filter>Behavioral\Mediator_Chatroom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +160,9 @@
     <Filter Include="Behavioral">
       <UniqueIdentifier>{448ea533-b95f-47eb-9c5a-9592758729f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Behavioral\Mediator_Chatroom">
+      <UniqueIdentifier>{70b1620f-ece3-4ddb-9901-8a92d9505ac3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SOLID\3_LSP.cpp">
@@ -191,6 +203,12 @@
     </ClInclude>
     <ClInclude Include="Structural\Pimpl\User.h">
       <Filter>Structural\Pimpl</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavioral\Mediator_Chatroom\ChatPerson.h">
+      <Filter>Behavioral\Mediator_Chatroom</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavioral\Mediator_Chatroom\ChatRoom.h">
+      <Filter>Behavioral\Mediator_Chatroom</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
