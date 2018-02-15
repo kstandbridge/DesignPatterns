@@ -86,6 +86,7 @@
     <ClCompile Include="Behavioral\Mediator.cpp" />
     <ClCompile Include="Behavioral\Mediator_Chatroom\ChatRoom.cpp" />
     <ClCompile Include="Behavioral\Mediator_Chatroom\ChatPerson.cpp" />
+    <ClCompile Include="Behavioral\Momento.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Structural\Proxy\communication_proxy.cpp" />
     <ClCompile Include="Creational\Builder\Builder.cpp" />
