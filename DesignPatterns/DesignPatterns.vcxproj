@@ -83,6 +83,7 @@
     <ClCompile Include="Behavioral\CompositeCommandPattern.cpp" />
     <ClCompile Include="Behavioral\Interpreter.cpp" />
     <ClCompile Include="Behavioral\iterator.cpp" />
+    <ClCompile Include="Behavioral\Mediator.cpp" />
     <ClCompile Include="Behavioral\Mediator_Chatroom\ChatRoom.cpp" />
     <ClCompile Include="Behavioral\Mediator_Chatroom\ChatPerson.cpp" />
     <ClCompile Include="main.cpp" />

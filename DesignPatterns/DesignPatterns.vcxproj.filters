@@ -119,6 +119,9 @@
     <ClCompile Include="Behavioral\Mediator_Chatroom\Mediator_Chatroom.cpp">
       <Filter>Behavioral\Mediator_Chatroom</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\Mediator.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
