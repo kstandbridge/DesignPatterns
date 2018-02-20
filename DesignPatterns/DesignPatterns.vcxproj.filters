@@ -143,6 +143,9 @@
     <ClCompile Include="Behavioral\Template_Method.cpp">
       <Filter>Behavioral</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\Visitor.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">
