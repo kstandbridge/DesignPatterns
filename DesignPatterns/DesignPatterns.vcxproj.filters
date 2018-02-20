@@ -131,6 +131,9 @@
     <ClCompile Include="Behavioral\Observer_boost.cpp">
       <Filter>Behavioral</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\State.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">

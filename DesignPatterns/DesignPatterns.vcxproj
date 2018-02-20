@@ -90,6 +90,7 @@
     <ClCompile Include="Behavioral\Observer.cpp" />
     <ClCompile Include="Behavioral\Observer_boost.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Behavioral\State.cpp" />
     <ClCompile Include="Structural\Proxy\communication_proxy.cpp" />
     <ClCompile Include="Creational\Builder\Builder.cpp" />
     <ClCompile Include="Creational\Builder\Facets\Facets.cpp" />
