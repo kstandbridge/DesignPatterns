@@ -146,6 +146,9 @@
     <ClCompile Include="Behavioral\Visitor.cpp">
       <Filter>Behavioral</Filter>
     </ClCompile>
+    <ClCompile Include="Behavioral\Visitor_Multiple_Dispatch.cpp">
+      <Filter>Behavioral</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SOLID">

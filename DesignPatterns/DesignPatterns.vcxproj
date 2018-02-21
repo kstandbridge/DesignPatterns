@@ -93,6 +93,7 @@
     <ClCompile Include="Behavioral\State_boost.cpp" />
     <ClCompile Include="Behavioral\Template_Method.cpp" />
     <ClCompile Include="Behavioral\Visitor.cpp" />
+    <ClCompile Include="Behavioral\Visitor_Multiple_Dispatch.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Behavioral\State.cpp" />
     <ClCompile Include="Structural\Proxy\communication_proxy.cpp" />
